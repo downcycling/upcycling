@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+.w3-theme-l5 {color:#000 !important; background-color:#fff6f0 !important}
+.w3-theme-l4 {color:#000 !important; background-color:#ffe0cc !important}
+.w3-theme-l3 {color:#000 !important; background-color:#ffc299 !important}
+.w3-theme-l2 {color:#000 !important; background-color:#cfc9c4 !important}
+.w3-theme-l1 {color:#fff !important; background-color:#ff8533 !important}
+.w3-theme-d1 {color:#fff !important; background-color:#e65c00 !important}
+.w3-theme-d2 {color:#fff !important; background-color:#cc5200 !important}
+.w3-theme-d3 {color:#fff !important; background-color:#b34700 !important}
+.w3-theme-d4 {color:#fff !important; background-color:#993d00 !important}
+.w3-theme-d5 {color:#fff !important; background-color:#803300 !important}
+
+.w3-theme-light {color:#000 !important; background-color:#fff6f0 !important}
+.w3-theme-dark {color:#fff !important; background-color:#803300 !important}
+.w3-theme-action {color:#fff !important; background-color:#803300 !important}
+
+.w3-theme {color:#000 !important; background-color:#b1a69d !important}
+.w3-text-theme {color:#ff6700 !important}
+.w3-border-theme {border-color:#ff6700 !important}
+
+.w3-hover-theme:hover {color:#fff !important; background-color:#ff6700 !important}
+.w3-hover-text-theme:hover {color:#ff6700 !important}
+.w3-hover-border-theme:hover {border-color:#ff6700 !important}
+
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+body *{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  z-index: 100;
+}
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("pictures/banner.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+h1{
+  font-size: 6vw;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+  outline: 0;
+}
+ul,
+li{
+  list-style: none;
+}
+label{
+  cursor: pointer;
+}
+input{
+  display: none;
+}
+/* -------------------------------------------------------- codepen */
+h1,
+p{
+	line-height: 22vw;
+}
+.galleries{
+  	width: 44vw;
+  	margin: 5vw auto;
+}
+.galleries .gallery-1{
+	background-color: #00DBF9;
+	background-image: url("pictures/taschebenno.jpg");
+        background-position: center;
+        background-size: cover;
+}
+.galleries .gallery-2{
+	background-color: #3D5B84;
+	background-image: url("pictures/taschedavid.jpg");
+        background-position: center;
+        background-size: cover;
+}
+.galleries .gallery-3{
+	background-color: #FD7FE3;
+	background-image: url("pictures/taschefeuer.jpg");
+        background-position: center;
+        background-size: cover;
+}
+.galleries .gallery-4{
+	background-color: #7E6DE0;
+	background-image: url("pictures/handytasche.jpg");
+        background-position: center;
+        background-size: cover;
+}
+.galleries > label{
+	width: 22vw;
+	height: 22vw;	
+	display: inline-block;
+}
+.galleries > .gallery > li{
+	margin: 1vw auto;
+	padding: 1vw;
+	width: auto;
+	display: none;
+}
+.galleries > .gallery > li > label.close-gallery{
+	width: 2vw;
+	height: 2vw;
+	margin-right: 0;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+.galleries > #input-gallery-null:checked ~ .gallery > li{
+	display: none;
+}
+.galleries > #input-gallery-1:checked ~ .gallery > li.gallery-1,
+.galleries > #input-gallery-2:checked ~ .gallery > li.gallery-2,
+.galleries > #input-gallery-3:checked ~ .gallery > li.gallery-3,
+.galleries > #input-gallery-4:checked ~ .gallery > li.gallery-4{	
+	display: block;
+}
+.galleries > #input-gallery-1:checked ~ label.gallery-1,
+.galleries > #input-gallery-2:checked ~ label.gallery-2,
+.galleries > #input-gallery-3:checked ~ label.gallery-3,
+.galleries > #input-gallery-4:checked ~ label.gallery-4{
+	text-transform: uppercase;
+ }
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s4">
+      <a href="index.html" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s4">
+      <a href="#" class="w3-button w3-block w3-black">GALLERIE</a>
+    </div>
+    <div class="w3-col s4">
+      <a href="index.html#kontakt" class="w3-button w3-block w3-black">KONTAKT</a>
+    </div>
+  </div>
+</div>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-theme-l2 w3-large">
+
+<!-- Gallerie -->
+<div class="w3-container" id="gallerie">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide"> </span></h5>
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">GALLERIE</span></h5>
+  </div>
+</div>
+
+<div class="galleries" id="gallery-close">
+  <input name="input-gallery" id="input-gallery-null" type="radio" onclick="location.href='#gallery-close';" checked="checked" />
+  <input name="input-gallery" id="input-gallery-1" type="radio" onclick="location.href='#gallery-open';" />
+  <input name="input-gallery" id="input-gallery-2" type="radio" onclick="location.href='#gallery-open';" />
+  <input name="input-gallery" id="input-gallery-3" type="radio" onclick="location.href='#gallery-open';" />
+  <input name="input-gallery" id="input-gallery-4" type="radio" onclick="location.href='#gallery-open';" />
+
+  <label for="input-gallery-1" class="gallery-1">
+    <p></p>
+  </label><label for="input-gallery-2" class="gallery-2">
+    <p></p>
+  </label><label for="input-gallery-3" class="gallery-3">
+    <p></p>
+  </label><label for="input-gallery-4" class="gallery-4">
+    <p></p>
+  </label>
+
+  <ul class="gallery" id="gallery-open">
+    <li class="gallery-1">
+      <label for="input-gallery-null" class="close-gallery"></label>
+      <h1>.</h1>
+    </li>
+    <li class="gallery-2">
+      <label for="input-gallery-null" class="close-gallery"></label>
+      <h1>.</h1>
+    </li>
+    <li class="gallery-3">
+      <label for="input-gallery-null" class="close-gallery"></label>
+      <h1>. </h1>
+    </li>
+    <li class="gallery-4">
+      <label for="input-gallery-null" class="close-gallery"></label>
+      <h1>. </h1>
+    </li>
+  </ul>
+</div><!-- galleries -->
+
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p><a href="index.html" title="Zurück zur Hautpseite" class="w3-hover-text-green">Zurück zur Hauptseite</a></p>
+</footer>
+
+</body>
+</html>
